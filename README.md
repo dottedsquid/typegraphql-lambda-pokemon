@@ -148,3 +148,52 @@ npx husky add commit-msg "npx --no-install commitlint --edit $1"
 
 echo 'node_modules/'>>.gitignore
 echo '.eslintcache'>>.gitignore
+
+###
+
+git add .
+git commit -m'chore: initial config'
+git remote add origin https://github.com/rdmujica/bff-typegraphql.git
+git branch -M main
+git push origin main
+
+### Add express development dependency
+
+npm i express
+npm i -D @types/express
+npm i -D ts-node
+
+https://expressjs.com/en/starter/hello-world.html
+
+
+npm i apollo-server-express
+
+https://www.apollographql.com/docs/apollo-server/integrations/middleware/
+
+
+
+### Install and config typescript 
+
+https://typegraphql.com/docs/installation.html
+
+
+npm i graphql class-validator type-graphql
+npm i reflect-metadata
+
+It's important to set these options in the tsconfig.json file of our project:
+
+{
+  "emitDecoratorMetadata": true,
+  "experimentalDecorators": true
+}
+
+{
+  "target": "es2018" // or newer if your node.js version supports this
+}
+
+
+Due to using the graphql-subscription dependency that relies on an AsyncIterator, we may also have to provide the esnext.asynciterable to the lib option:
+
+{
+  "lib": ["es2018", "esnext.asynciterable"]
+}
