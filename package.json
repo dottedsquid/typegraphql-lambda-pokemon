@@ -30,10 +30,12 @@
   },
   "dependencies": {
     "apollo-server": "^2.19.0",
+    "apollo-server-plugin-base": "^0.10.2",
     "class-validator": "^0.12.2",
     "graphql": "^15.4.0",
     "node-fetch": "^2.6.1",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^1.1.1"
+    "type-graphql": "^1.1.1",
+    "winston": "^3.3.3"
   }
 }

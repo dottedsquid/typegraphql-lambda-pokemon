@@ -4,7 +4,7 @@ import { Min } from 'class-validator'
 @ArgsType()
 class PokemonIdArgs {
   @Field(() => Int)
-  @Min(1)
+  @Min(1, { message: 'Must be greater than 0' })
   id: number
 }
 
