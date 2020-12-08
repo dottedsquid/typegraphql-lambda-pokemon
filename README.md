@@ -120,7 +120,7 @@ npm i -D lint-staged
 add lintstagedrc.json file
 
 echo '{' >> .lintstagedrc.json
-echo ' "*.ts": "eslint --cache --fix"' >> .lintstagedrc.json
+echo ' "\*.ts": "eslint --cache --fix"' >> .lintstagedrc.json
 echo '}' >> .lintstagedrc.json
 
 add scripts in package.json
@@ -165,17 +165,13 @@ npm i -D ts-node
 
 https://expressjs.com/en/starter/hello-world.html
 
-
 npm i apollo-server-express
 
 https://www.apollographql.com/docs/apollo-server/integrations/middleware/
 
-
-
-### Install and config typescript 
+### Install and config typescript
 
 https://typegraphql.com/docs/installation.html
-
 
 npm i graphql class-validator type-graphql
 npm i reflect-metadata
@@ -183,17 +179,25 @@ npm i reflect-metadata
 It's important to set these options in the tsconfig.json file of our project:
 
 {
-  "emitDecoratorMetadata": true,
-  "experimentalDecorators": true
+"emitDecoratorMetadata": true,
+"experimentalDecorators": true
 }
 
 {
-  "target": "es2018" // or newer if your node.js version supports this
+"target": "es2018" // or newer if your node.js version supports this
 }
-
 
 Due to using the graphql-subscription dependency that relies on an AsyncIterator, we may also have to provide the esnext.asynciterable to the lib option:
 
 {
-  "lib": ["es2018", "esnext.asynciterable"]
+"lib": ["es2018", "esnext.asynciterable"]
 }
+
+https://www.apollographql.com/docs/apollo-server/deployment/lambda/#gatsby-focus-wrapper
+
+npm install -g serverless
+npm install apollo-server-lambda
+
+npm install serverless-offline --save-dev
+npm install -D serverless-plugin-typescript
+ npm uninstall apollo-server

@@ -1,0 +1,27 @@
+service: apollo-lambda
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+functions:
+  index:
+    # this is formatted as <FILENAME>.<HANDLER>
+    handler: src/graphql.graphqlHandler
+    events:
+      - http:
+          path: graphql
+          method: post
+          cors: true
+      - http:
+          path: graphql
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
+
+custom:
+  serverless-offline:
+    httpPort: 4000
