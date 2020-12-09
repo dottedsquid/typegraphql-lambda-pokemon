@@ -2,7 +2,7 @@ import { Field, ObjectType } from 'type-graphql'
 
 import ItemName from './ItemName'
 
-@ObjectType({ description: 'The ability model' })
+@ObjectType('Ability', { description: 'The ability model' })
 class Ability {
   @Field({ description: 'The name of ability' })
   ability: ItemName

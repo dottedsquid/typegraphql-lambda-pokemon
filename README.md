@@ -201,3 +201,10 @@ npm install apollo-server-lambda
 npm install serverless-offline --save-dev
 npm install -D serverless-plugin-typescript
  npm uninstall apollo-server
+
+
+=======================
+
+
+npm uninstall ts-node serverless-plugin-typescript
+npm i -D webpack serverless-webpack ts-loader webpack-node-externals

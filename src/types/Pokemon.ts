@@ -3,7 +3,7 @@ import { Field, ObjectType, Int } from 'type-graphql'
 import Ability from './Ability'
 import Move from './Move'
 
-@ObjectType({ description: 'The pokemon model' })
+@ObjectType('Pokemon', { description: 'The pokemon model' })
 class Pokemon {
   @Field(() => Int, { description: 'Pokemon ID' })
   id!: number
